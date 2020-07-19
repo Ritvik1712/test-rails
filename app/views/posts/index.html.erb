@@ -1,0 +1,11 @@
+<header>
+    <%= link_to "Show all posts", posts_path %>
+    <%= link_to "Create new post", new_post_path %>
+</header>
+
+<h1>ALL POSTS</h1>
+<% @posts.each do |p| %>
+    <p><strong>Author:</strong> <%= p.author %> <br>
+    <strong>Post:</strong> <%= p.content %> </p>
+    <%= link_to 'Delete', p, :method => :delete %>
+<% end %>

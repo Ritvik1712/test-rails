@@ -1,0 +1,12 @@
+<header>
+    <%= link_to "Show all posts", posts_path %>
+    <%= link_to "Create new post", new_post_path %>
+</header>
+
+<h1>NEW POST</h1>
+
+<%= form_for(@post) do |f| %>
+    Author : <%= f.text_field :author %><br>
+    Content: <%= f.text_area :content %>
+    <%= f.submit :Create %>
+<% end %>
